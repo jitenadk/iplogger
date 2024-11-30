@@ -17,8 +17,8 @@ Ensure you have the following installed:
 
 ### Clone the Repository
 ```bash
-git clone https://github.com/<username>/<repo>.git
-cd <repo>
+git clone https://github.com/jitenadk/iplogger.git
+cd iplogger
 ```
 
 ### Install Dependencies
