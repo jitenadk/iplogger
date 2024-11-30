@@ -14,7 +14,6 @@ const honeypotPort = 8081;
 // Logs storage
 let logs = [];
 
-// Dashboard Server
 function startDashboardServer() {
     const app = express();
     const server = app.listen(dashboardPort, dashboardHost);
@@ -37,7 +36,6 @@ function startDashboardServer() {
     });
 }
 
-// Honeypot Server
 function startHoneypotServer() {
     const app = express();
     const server = app.listen(honeypotPort, honeypotHost);
@@ -67,6 +65,5 @@ function startHoneypotServer() {
     });
 }
 
-// Start both servers
 startDashboardServer();
 startHoneypotServer();
