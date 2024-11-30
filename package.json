@@ -1,0 +1,28 @@
+{
+  "name": "ipinfo",
+  "version": "1.0.0",
+  "description": "ipinfo honeypot-model.",
+  "main": "main.js",
+  
+  "scripts": {
+    "test-honeypot": "nodemon .",
+    "init-honeypot": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/<username>/<repo>.git"
+  },
+  "author": "Jiten Adhikari (jitenadhikari001@gmail.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/<username>/<repo>/issues"
+  },
+  "homepage": "https://github.com/<username>/<repo>#readme",
+  
+  "dependencies": {
+    "axios": "^1.6.8",
+    "express": "^4.19.2",
+    "path": "^0.12.7",
+    "request-ip": "^3.3.0"
+  }
+}

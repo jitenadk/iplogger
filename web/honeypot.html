@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HoneyPot - IpInfo</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            color: #f5f5f5;
+            background-color: #2b2d42; /* Updated background color */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Roboto', sans-serif;
+            background-image: url(''); /* Background image will be set dynamically */
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 1rem;
+            background-color: #edf2f4; /* Updated background color */
+            border-radius: 20px; /* Rounded corners */
+            border: 2px solid #ef233c; /* Border color */
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out; /* Add transition */
+        }
+
+        .card:hover {
+            transform: translateY(-10px); /* Move the card up when hovering */
+        }
+
+        .icon {
+            font-size: 3rem;
+            color: #ef233c;
+        }
+
+        .info {
+            text-align: center;
+        }
+
+        .info h2 {
+            color: #ef233c;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .info p {
+            color: #8d99ae;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <i class="icon">🔒</i>
+            <div class="info">
+                <h2>Secure Connection</h2>
+                <p>Your connection to this server is encrypted and secure.</p>
+            </div>
+        </div>
+        <div class="card">
+            <i class="icon">💻</i>
+            <div class="info">
+                <h2>IP Address</h2>
+                <p>Your IP address is being logged for security purposes.</p>
+            </div>
+        </div>
+        <div class="card">
+            <i class="icon">🔍</i>
+            <div class="info">
+                <h2>Privacy Notice</h2>
+                <p>We value your privacy and handle your information with care.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to fetch a random background image from Unsplash API
+        function fetchRandomBackground() {
+            fetch('https://source.unsplash.com/random/1920x1080')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.url;
+                })
+                .then(imageUrl => {
+                    document.body.style.backgroundImage = `url(${imageUrl})`;
+                })
+                .catch(error => console.error('There was a problem fetching the background image:', error));
+        }
+
+        // Call the function to set the initial background image
+        fetchRandomBackground();
+    </script>
+</body>
+</html>
